@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WEBSITE</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    iframe {
+      border: none;
+    }
+
+    .top {
+      height: 25%;
+    }
+
+    .bottom {
+      flex-grow: 1;
+      display: flex;
+    }
+
+    .left {
+      width: 25%;
+    }
+
+    .right {
+      width: 75%;
+    }
+  </style>
+</head>
+
+<body>
+  <iframe src="top.html" class="top"></iframe>
+  <div class="bottom">
+    <iframe src="left.html" name="leftFrame" class="left"></iframe>
+    <iframe src="right.html" name="rightFrame" class="right"></iframe>
+  </div>
+</body>
+
+</html>
