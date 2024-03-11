@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>swiggy</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function validateLoginForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username.length < 6) {
+                alert('Username must be at least 6 characters.');
+                return false;
+            } else if (password.length < 8) {
+                alert('Password must be at least 8 characters.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="loginbox">
+        <img src="avatar.png" class="avatar">
+        <h1>Login</h1>
+        <form action="login_process.php" method="post" onsubmit="validateLoginForm();">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" placeholder="Enter Username"><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+            <input type="submit" value="Login">
+            <a href="forgot_password.html">Forget Password?</a>
+            <br><a href="registration.html">Don't have an account?</a>
+        </form>
+    </div>
+</body>
+
+</html>
 
